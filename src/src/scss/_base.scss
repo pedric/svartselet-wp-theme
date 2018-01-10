@@ -1,0 +1,29 @@
+* {
+	font-weight: 300;
+	color: $gray;
+	box-sizing: border-box;
+}
+
+html {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.5em;
+  line-height: 1.35;
+  background: $light;
+}
+
+img {
+	max-width: 100%;
+  height: auto;
+}
+
+/* WP defaults */
+img[class*="align"],
+img[class*="wp-image-"] {
+    height: auto; /* Make sure images with WordPress-added height and width >attributes are scaled correctly */
+}
+img.size-full {
+    max-width: 97.5%;
+    width: auto; /* Prevent stretching of full-size images with height and >>width attributes in IE8 */
+}
+
+.serif p { font-family: 'Crimson Text', serif; }

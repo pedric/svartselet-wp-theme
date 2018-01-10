@@ -1,0 +1,52 @@
+$loader-size: 60px;
+
+.m-loader {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: $light;
+	z-index: 999;
+
+	&__icon-wrapper {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translateX(-50%)translateY(-50%);
+	}
+
+	&__icon {
+		box-sizing: border-box;
+		position: relative;
+    border: 1px solid $dark;
+    border-radius: 50%;
+    width: $loader-size;
+    height: $loader-size;
+    overflow: hidden;
+    animation: spin 2s linear infinite;
+
+    & div:nth-child(1) {
+    	position: absolute;
+    	top: 0;
+    	left: 0;
+    	width: $loader-size;
+    	height: $loader-size/2;
+    	background: $dark;
+    }
+
+    & div:nth-child(2) {
+    	position: absolute;
+    	top: $loader-size/2;
+    	left: 0;
+    	width: $loader-size;
+    	height: $loader-size/2;
+    	background: $light;
+    }
+	}
+
+	@keyframes spin {
+	    0% { transform: rotate(0deg); }
+	    100% { transform: rotate(360deg); }
+	}
+}

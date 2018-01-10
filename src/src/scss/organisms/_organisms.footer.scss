@@ -1,0 +1,14 @@
+.footer {
+	display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 66vh;
+  margin-top: $spacing*10;
+  border-top: 4px solid $gray;
+
+	&__logo {
+		display: block;
+		width: 66.6667%;
+		margin: 0 auto;
+	}
+}

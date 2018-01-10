@@ -1,0 +1,102 @@
+.o-main-menu {
+  background: $gray;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 100vw;
+  height: 0;
+  z-index: 10;
+  transition: all 0.25s ease-out;
+
+  &[active] {
+  	height: 100vh;  	
+  }
+
+  &__nav {
+  	display: none;
+    height: 100%;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: flex-end;
+		opacity: 0;
+		transition: all 0.2s ease-out;
+
+		&[active] {
+			opacity: 1;
+			display: flex;
+	  }
+	}
+
+	&__list-item {
+		a {
+			position: relative;
+			font-size: $font-size-x-large;
+			line-height: 1.14em;
+			color: $light;
+			text-decoration: none;
+
+			&:after {
+				content: '';
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 0px;
+				height: 4px;
+				background: $gray;
+				transition: all 0.2s ease-out;
+			}
+
+			&:hover {
+				&:after {
+					width: 100%;
+					background: $light;
+				}
+			}
+		}
+	}
+}
+
+
+/* WP Default */
+.menu-menu-1-container {
+	padding: 0 $spacing*5 $spacing*12 0;
+
+	@media (min-width: $small-device) {
+  	padding: 0 $spacing*6 $spacing*12 0;
+  }
+
+	& > .menu {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	& .menu-item {
+		a {
+			position: relative;
+			font-family: 'Crimson Text', serif;
+			font-size: $font-size-x-large;
+			line-height: 1.14em;
+			color: $light;
+			text-decoration: none;
+
+			&:after {
+				content: '';
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 0px;
+				height: 4px;
+				background: $gray;
+				transition: all 0.2s ease-out;
+			}
+
+			&:hover {
+				&:after {
+					width: 100%;
+					background: $light;
+				}
+			}
+		}
+	}
+}

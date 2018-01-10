@@ -1,0 +1,34 @@
+.m-decoration {
+	position: absolute;
+	width: $spacing*4;
+	height: $spacing*4;
+	color: $dark;
+
+	&:nth-child(1) {
+		top: -$spacing*2;
+		left: -$spacing*2;
+		border-top: 1px solid #000;
+		border-left: 1px solid #000;
+	}
+
+	&:nth-child(2) {
+		top: -$spacing*2;
+		right: -$spacing*2;
+		border-top: 1px solid #000;
+		border-right: 1px solid #000;	
+	}
+
+	&:nth-child(3) {
+		bottom: -$spacing*2;
+		right: -$spacing*2;
+		border-bottom: 1px solid #000;
+		border-right: 1px solid #000;
+	}
+
+	&:nth-child(4) {
+		bottom: -$spacing*2;
+		left: -$spacing*2;
+		border-bottom: 1px solid #000;
+		border-left: 1px solid #000;
+	}
+}

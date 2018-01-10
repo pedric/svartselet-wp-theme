@@ -1,0 +1,81 @@
+.m-portfolio-item {
+    padding: $spacing*3 0;
+    position: relative;
+    @media (min-width: $small-device) {
+        padding: $spacing*3 $spacing*3;
+        margin: $spacing*9 0;
+    }
+
+    &--small {
+        margin: 0;
+    }
+
+    & a {
+        text-decoration: none;
+        transition: all 0.25s ease-out;
+
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: 20px;
+            left: $spacing*3;
+            width: 0px;
+            height: 4px;
+            background: $gray;
+            transition: all 0.2s ease-out;
+        }
+
+        &:hover,
+        &:focus {
+            &:after {
+                width: calc(100% - 48px);
+            }
+        }
+
+        & img {
+            height: auto;
+            filter: grayscale(0%);
+            transition: all 0.25s ease-out;
+        }
+
+        &:hover {
+            & img {
+                filter: grayscale(50%);
+            }
+        }
+    }
+
+    &__title {
+        font-size: 18px;
+        font-weight: normal;
+        text-transform: capitalize;
+        padding: 6px 4px;
+        margin: -3px 0 0 0;
+        background: #fff;
+    }
+
+    &__description {
+        margin-bottom: $spacing*9;
+        width: 100%;
+
+        & h2 {
+            margin: 0;
+        }
+
+        & p {
+            margin: 0;
+        }
+
+        &--text {
+            margin-bottom: $spacing*9;
+            @media (min-width: $small-device) { margin-bottom: $spacing*4; }
+        }
+    }
+
+    &--business-card {
+        // @media (min-width: $small-device) {
+        //     background: #fff;
+        //     padding: $spacing*4 $spacing*6;
+        // }
+    }
+}

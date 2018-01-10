@@ -1,0 +1,24 @@
+h1,
+h2,
+h2 > span,
+h3 {
+	font-weight: 900;	
+}
+
+.serif { font-family: 'Crimson Text', serif; }
+
+.sans-serif { font-family: 'Lato', sans-serif; }
+
+.bold { font-weight: 900; }
+
+.uppercase { text-transform: uppercase; }
+
+.lowercase { text-transform: lowercase; }
+
+.capitalize { text-transform: capitalize; }
+
+.overline { text-decoration: line-through; }
+
+.italic { text-decoration: italic; }
+
+a { text-decoration: underline; }
